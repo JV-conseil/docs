@@ -11,7 +11,7 @@
 
 ## Table of Content
 
-1. [PostgreSQL](postresql.md) 🐘 Cheatsheet
+1. [PostgreSQL](postgresql.md) 🐘 Cheatsheet
 
 ## Sponsorship
 
