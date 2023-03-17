@@ -13,10 +13,11 @@
 
 1. [PostgreSQL](postgresql.md) 🐘 Cheatsheet
 2. [Git](git.md) Cheatsheet
+3. [Bash](bash.md) References
 
 ## References 📚
 
-- [Awesome-Cheatsheets](https://lecoupa.github.io/awesome-cheatsheets/) 🪶 github.com/LeCoupa.
+- [Awesome-Cheatsheets](https://lecoupa.github.io/awesome-cheatsheets/) 🪶 (github.com/LeCoupa)
 -
 
 <!--
