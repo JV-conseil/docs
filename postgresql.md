@@ -18,6 +18,9 @@ title: PostgreSQL 🐘 Cheatsheet
 [![Follow JVconseil on Mastodon](https://img.shields.io/mastodon/follow/109896584320509054?domain=https%3A%2F%2Ffosstodon.org)](https://fosstodon.org/@JVconseil "Follow JVconseil@fosstodon.org on Mastodon")
 [![Follow JV conseil on GitHub](https://img.shields.io/github/followers/JV-conseil?label=JV-conseil&style=social)](https://github.com/JV-conseil "Follow JV-conseil on GitHub")
 
+<!-- omit in toc -->
+## Table of Content
+
 - [Database](#database)
 - [Table](#table)
 - [User](#user)
@@ -27,8 +30,6 @@ title: PostgreSQL 🐘 Cheatsheet
 - [Change Table \& Sequence ownership](#change-table--sequence-ownership)
 - [CSV \& JSON Gzip Data Dump](#csv--json-gzip-data-dump)
 - [Timezone](#timezone)
-- [References 📚](#references-)
-- [Sponsorship](#sponsorship)
 
 ## Database
 
@@ -200,6 +201,7 @@ SHOW timezone ;
 SELECT * FROM pg_timezone_names ;
 ```
 
+<!-- omit in toc -->
 ## References 📚
 
 - PostgreSQL 14.4 [Documentation](https://www.postgresql.org/docs/14/) (postgresql.org).
@@ -207,10 +209,9 @@ SELECT * FROM pg_timezone_names ;
 - Django [PostgreSQL notes](https://docs.djangoproject.com/en/4.0/ref/databases/#postgresql-notes) (docs.djangoproject.com).
 - Postgres [Cheat Sheet](https://postgrescheatsheet.com/#/tables).
 
+<!-- omit in toc -->
 ## Sponsorship
 
 If this project helps you, you can offer me a cup of coffee ☕️ :-)
-
-<!-- [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/R5R018CIU) -->
 
 [![Become a sponsor to JV-conseil](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/JV-conseil)
