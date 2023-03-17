@@ -18,7 +18,6 @@
 ## References 📚
 
 - [Awesome-Cheatsheets](https://lecoupa.github.io/awesome-cheatsheets/) 🪶 (github.com/LeCoupa)
--
 
 <!--
 
