@@ -5,8 +5,7 @@ title: Bash
 
 <!-- markdownlint-disable MD025 MD026 MD033 MD041 -->
 
-<a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html" target="_blank" title="Bash 5.2.15(1)-release"><img src="
-https://bashlogo.com/img/logo/png/full_colored_light.png" align="right" alt="Bash 5.2.15(1)-release" height="100"></a>
+<a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html" target="_blank" title="Bash 5.2.15(1)-release"><img src="https://bashlogo.com/img/logo/png/full_colored_light.png" align="right" alt="Bash 5.2.15(1)-release" height="100"></a>
 
 <!-- omit in toc -->
 # Bash
