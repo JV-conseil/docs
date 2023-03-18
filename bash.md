@@ -4,6 +4,10 @@ title: Bash
 ---
 
 <!-- markdownlint-disable MD025 MD026 MD033 MD041 -->
+
+<a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html" target="_blank" title="Bash 5.2.15(1)-release"><img src="
+https://bashlogo.com/img/logo/png/full_colored_light.png" align="right" alt="Bash 5.2.15(1)-release" height="100"></a>
+
 <!-- omit in toc -->
 # Bash
 
@@ -22,13 +26,14 @@ title: Bash
 
 ## References 📚
 
-- [Advanced Bash-Scripting Guide](https://tldp.org/LDP/abs/html/index.html), An in-depth exploration of the art of shell scripting by Mendel Cooper (The Linux Documentation Project LDP).
+- [Advanced Bash-Scripting Guide](https://tldp.org/LDP/abs/html/index.html), an in-depth exploration of the art of shell scripting by Mendel Cooper _(The Linux Documentation Project LDP)_.
 - [Awesome Bash](https://github.com/awesome-lists/awesome-bash) A curated list of delightful Bash scripts and resources.
-- [Shell Scripting for Beginners](https://www.freecodecamp.org/news/shell-scripting-crash-course-how-to-write-bash-scripts-in-linux/) — How to Write Bash Scripts in Linux (freecodecamp.org).
-- [The Ultimate Guide to Modularizing Bash Script Code](https://medium.com/mkdir-awesome/the-ultimate-guide-to-modularizing-bash-script-code-f4a4d53000c2) by Shinichi Okada (medium.com).
-- [Google Shell Style Guide](https://google.github.io/styleguide/shellguide.html) revision 2.02.
-- [How to use a key-value dictionary](https://www.xmodulo.com/key-value-dictionary-bash.html) in bash.
-- [Bash Parameter expansions](https://devhints.io/bash#parameter-expansions).
+- [Shell Scripting for Beginners](https://www.freecodecamp.org/news/shell-scripting-crash-course-how-to-write-bash-scripts-in-linux/) — How to Write Bash Scripts in Linux _(freecodecamp.org)_.
+- The Ultimate Guide to [Modularizing Bash Script Code](https://medium.com/mkdir-awesome/the-ultimate-guide-to-modularizing-bash-script-code-f4a4d53000c2) by Shinichi Okada _(medium.com)_.
+- Google [Shell Style Guide](https://google.github.io/styleguide/shellguide.html) revision 2.02.
+- How to use a [key-value dictionary](https://www.xmodulo.com/key-value-dictionary-bash.html) in bash.
+- Bash [Parameter expansions](https://devhints.io/bash#parameter-expansions) _(devhints.io)_.
+- Bash [Reference Manual](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html) _(gnu.org)_.
 
 ## Sponsorship
 
