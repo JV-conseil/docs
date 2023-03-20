@@ -73,6 +73,7 @@ Delete tags
 
 ```bash
 git tag --delete "2.0"
+git push --delete "2.0"
 ```
 
 <!-- omit in toc -->
