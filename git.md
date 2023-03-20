@@ -21,6 +21,7 @@ title: Git Cheatsheet
 - [Clone a specific branch](#clone-a-specific-branch)
 - [Force "git pull"](#force-git-pull)
 - [Revert to a good commit](#revert-to-a-good-commit)
+- [Tags](#tags)
 
 ## Clone a specific branch
 
@@ -50,6 +51,29 @@ git push origin +{good-commit-sha}:master
 ```
 
 _src :point_right: [stackoverflow.com](https://stackoverflow.com/a/35291514/2477854/)_
+
+## Tags
+
+List tags
+
+```bash
+git tag --list --column --sort tag
+```
+
+Signing tag with `-s`
+
+```bash
+git tag --sign "2.0" --message "Stable ✨"
+git push --tags
+```
+
+_src :point_right: [Signing tags](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-tags)_
+
+Delete tags
+
+```bash
+git tag --delete "2.0"
+```
 
 <!-- omit in toc -->
 ## References 📚
