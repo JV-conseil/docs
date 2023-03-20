@@ -64,7 +64,7 @@ Signing tag with `-s`
 
 ```bash
 git tag --sign "2.0" --message "Stable ✨"
-git push --tags
+git push origin --tags
 ```
 
 _src :point_right: [Signing tags](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-tags)_
@@ -73,7 +73,7 @@ Delete tags
 
 ```bash
 git tag --delete "2.0"
-git push --delete "2.0"
+git push origin --delete "2.0"
 ```
 
 <!-- omit in toc -->
