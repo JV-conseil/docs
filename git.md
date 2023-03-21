@@ -18,10 +18,20 @@ title: Git Cheatsheet
 <!-- omit in toc -->
 ## Table of Content
 
+- [Config](#config)
 - [Clone a specific branch](#clone-a-specific-branch)
-- [Force "git pull"](#force-git-pull)
+- [Force a "git pull"](#force-a-git-pull)
 - [Revert to a good commit](#revert-to-a-good-commit)
 - [Tags](#tags)
+
+## Config
+
+Review your git configuration and settings
+
+```bash
+git --version
+git config --list
+```
 
 ## Clone a specific branch
 
@@ -31,7 +41,7 @@ git clone --branch development https://github.com/username/project.git
 
 _src :point_right: [theserverside.com](https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/How-to-git-clone-a-specific-branch-only)_
 
-## Force "git pull"
+## Force a "git pull"
 
 ```bash
 git fetch --all
