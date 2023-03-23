@@ -5,7 +5,7 @@ title: Markdown
 
 <!-- markdownlint-disable MD025 MD026 MD033 MD041 -->
 
-<a href="https://daringfireball.net/projects/markdown/" target="_blank" title="Markdown By John Gruber"><img src="https://d33wubrfki0l68.cloudfront.net/f1f475a6fda1c2c4be4cac04033db5c3293032b4/513a4/assets/images/markdown-mark-white.svg" align="right" alt="Markdown By John Gruber" height="80"></a>
+<a href="https://daringfireball.net/projects/markdown/" target="_blank" title="Markdown By John Gruber"><img src="https://raw.githubusercontent.com/dcurtis/markdown-mark/master/svg/markdown-mark.svg" align="right" alt="Markdown By John Gruber" height="80"></a>
 
 <!-- omit in toc -->
 # Markdown
@@ -24,8 +24,8 @@ title: Markdown
 
 ## References 📚
 
-- [Official website](https://daringfireball.net/projects/markdown/basics) for original John Gruber markup.
-- [Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) on GitHub.
+- [Markdown Syntax](https://daringfireball.net/projects/markdown/syntax) - John Gruber
+- [Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) - Create sophisticated formatting for your prose and code on GitHub with simple syntax
 
 ## Sponsorship
 
