@@ -4,10 +4,10 @@ google:
   gtag: G-PXGLPMH2BL
   site_verification: ChPjQbKFflPAwOF9uuYRLEodZBgPjW5CISg0gSsViN0
 
-readme_index:
-  with_frontmatter: true
-
 plugins:
   - jemoji
   - jekyll-avatar
   - jekyll-mentions
+
+readme_index:
+  with_frontmatter: true
