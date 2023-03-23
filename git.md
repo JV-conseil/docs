@@ -4,6 +4,9 @@ title: Git Cheatsheet
 ---
 
 <!-- markdownlint-disable MD025 MD026 MD033 MD041 -->
+
+<a href="https://git-scm.com/docs" target="_blank" title="Bourne-Again SHell"><img src="https://git-scm.com/images/logo@2x.png" align="right" alt="Bourne-Again SHell" height="80"></a>
+
 <!-- omit in toc -->
 # Git Cheatsheet
 
@@ -89,10 +92,10 @@ git push origin --delete "2.0"
 <!-- omit in toc -->
 ## References 📚
 
-- Git Complete [List of all Commands](https://git-scm.com/docs).
-- Git Commands [Cheat Sheet PDF](https://dev.to/doabledanny/git-cheat-sheet-50-commands-free-pdf-and-poster-4gcn).
-- [GitHub](https://education.github.com/git-cheat-sheet-education.pdf) Git Cheatsheet.
-- [GitLab](https://about.gitlab.com/images/press/git-cheat-sheet.pdf) Git Cheatsheet.
+- [Complete list of all commands](https://git-scm.com/docs) - Git official manual
+- [Git Cheat Sheets](https://training.github.com/downloads/github-git-cheat-sheet/) - GitHub Training Kit, open source courseware from the GitHub Professional Services team
+- [Git Cheat Sheets](https://education.github.com/git-cheat-sheet-education.pdf) - GitHub Git Cheatsheet (PDF)
+- [Git Cheat Sheets](https://about.gitlab.com/images/press/git-cheat-sheet.pdf) - GitLab Git Cheatsheet
 
 <!-- omit in toc -->
 ## Sponsorship

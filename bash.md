@@ -5,7 +5,7 @@ title: Bash
 
 <!-- markdownlint-disable MD025 MD026 MD033 MD041 -->
 
-<a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html" target="_blank" title="Bourne-Again SHell"><img src="https://bashlogo.com/img/logo/svg/full_colored_dark.svg" align="right" alt="Bourne-Again SHell" height="100"></a>
+<a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html" target="_blank" title="Bourne-Again SHell"><img src="https://bashlogo.com/img/logo/svg/full_colored_dark.svg" align="right" alt="Bourne-Again SHell" height="150"></a>
 
 <!-- omit in toc -->
 # Bash
@@ -45,7 +45,7 @@ With `grep -Eo` + a [regex](https://regex101.com/library/wUcSv4) pattern
 echo "curl 'https://cloud.sdu.dk/api/ingresses/browse?itemsPerPage=100&includeOthers=true&sortDirection=ascending' -H 'Accept: */*' -H 'Accept-Language: en-US,en;q=0.5' -H 'Accept-Encoding: gzip, deflate, br' -H 'Authorization: Bearer *****' -H 'Content-Type: application/json; charset=utf-8'" | grep -Eo "http[^ ']+"
 ```
 
-_src :point_right: [stackoverflow.com](https://stackoverflow.com/a/13373256/2477854)_
+_src 👉 [stackoverflow.com](https://stackoverflow.com/a/13373256/2477854)_
 
 ## Read a Json stream
 
@@ -55,13 +55,12 @@ With `jq`
 curl 'https://cloud.sdu.dk/api/ingresses/browse?itemsPerPage=100&includeOthers=true&sortDirection=ascending' -H 'Accept: */*' -H 'Accept-Language: en-US,en;q=0.5' -H 'Accept-Encoding: gzip, deflate, br' -H 'Authorization: Bearer *****' -H 'Content-Type: application/json; charset=utf-8' --compressed | jq '.items[].specification.domain' >"${HOME}/Downloads/example.json"
 ```
 
-_src :point_right: [jq/manual](https://stedolan.github.io/jq/manual/)_
+_src 👉 [jq/manual](https://stedolan.github.io/jq/manual/)_
 
 ## Tools for Shell Script Development ⚙️
 
-|                                                                                                                                                                                                 |                                                                                                                                                                                                                                                                                 |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <img src="https://timonwong.gallerycdn.vsassets.io/extensions/timonwong/shellcheck/0.29.4/1676233151659/Microsoft.VisualStudio.Services.Icons.Default" height="50" style="margin:.5rem">        | [ShellCheck](https://marketplace.visualstudio.com/items?itemName=timonwong.shellcheck)<br>Integrates [ShellCheck](https://github.com/koalaman/shellcheck) into VS Code, a linter for Shell scripts                                                                              |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <img src="https://foxundermoon.gallerycdn.vsassets.io/extensions/foxundermoon/shell-format/7.2.5/1676969811685/Microsoft.VisualStudio.Services.Icons.Default" height="50" style="margin:.5rem"> | [shell-format](https://marketplace.visualstudio.com/items?itemName=foxundermoon.shell-format)<br>A formatter for shell scripts implementing [shfmt](https://github.com/mvdan/sh) parser, formatter, and interpreter<br>See [Google Shell Style Guide][Google Shell Style Guide] |
 
 <!-- omit in toc -->
