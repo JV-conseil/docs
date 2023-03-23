@@ -87,7 +87,7 @@ curl 'https://cloud.sdu.dk/api/ingresses/browse?itemsPerPage=100&includeOthers=t
 -H 'Accept: */*' -H 'Accept-Language: en-US,en;q=0.5' \
 -H 'Accept-Encoding: gzip, deflate, br' -H 'Authorization: Bearer *****' \
 -H 'Content-Type: application/json; charset=utf-8' \
---compressed | jq '.items[].specification.domain' >"${HOME}/Downloads/example.json"
+--compressed | jq '.items[].specification.domain' >~/Downloads/example.json
 ```
 
 _src 👉 [jq/manual](https://stedolan.github.io/jq/manual/)_
