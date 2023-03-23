@@ -5,7 +5,7 @@ title: Git Cheatsheet
 
 <!-- markdownlint-disable MD025 MD026 MD033 MD041 -->
 
-<a href="https://git-scm.com/docs" target="_blank" title="Bourne-Again SHell"><img src="https://git-scm.com/images/logo@2x.png" align="right" alt="Bourne-Again SHell" height="80"></a>
+<a href="https://git-scm.com/docs" target="_blank" title="Bourne-Again SHell"><img src="https://git-scm.com/images/logo@2x.png" align="right" alt="Git" height="80"></a>
 
 <!-- omit in toc -->
 # Git Cheatsheet
