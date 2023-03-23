@@ -43,7 +43,19 @@ title: Bash
 With `grep -Eo` + [regex](https://regex101.com/library/wUcSv4) pattern
 
 ```bash
-echo "curl 'https://cloud.sdu.dk/api/ingresses/browse?itemsPerPage=100&includeOthers=true&sortDirection=ascending' -H 'Accept: */*' -H 'Accept-Language: en-US,en;q=0.5' -H 'Accept-Encoding: gzip, deflate, br' -H 'Authorization: Bearer *****' -H 'Content-Type: application/json; charset=utf-8'" | grep -Eo "http[^ ']+"
+grep -Eo "http[^ ']+" <<EOF
+curl 'https://cloud.sdu.dk/api/ingresses/browse?itemsPerPage=100&includeOthers=true&sortDirection=ascending'
+-H 'Accept: */*' -H 'Accept-Language: en-US,en;q=0.5'
+-H 'Accept-Encoding: gzip, deflate, br'
+-H 'Authorization: Bearer ****'
+-H 'Content-Type: application/json; charset=utf-8'
+-H 'Cookie: refreshToken=cf6220bd%2D650c%2D4a48%2D9836%2D58ea9ecb7567'
+-H 'Sec-Fetch-Dest: empty'
+-H 'Sec-Fetch-Mode: cors'
+-H 'Sec-Fetch-Site: same-origin'
+-H 'Pragma: no-cache'
+-H 'Cache-Control: no-cache'
+EOF
 ```
 
 _src 👉 [stackoverflow.com](https://stackoverflow.com/a/13373256/2477854)_
@@ -52,7 +64,7 @@ _src 👉 [stackoverflow.com](https://stackoverflow.com/a/13373256/2477854)_
 
 Example of a pyproject.toml file
 
-```txt
+```toml
 [tool.poetry]
 name = "docs"
 version = "0.1.0"
@@ -71,7 +83,11 @@ grep -Eo "^repository.+$" pyproject.toml | sed -E 's/^repository = "(.+)"$/\1/'
 With `jq`
 
 ```bash
-curl 'https://cloud.sdu.dk/api/ingresses/browse?itemsPerPage=100&includeOthers=true&sortDirection=ascending' -H 'Accept: */*' -H 'Accept-Language: en-US,en;q=0.5' -H 'Accept-Encoding: gzip, deflate, br' -H 'Authorization: Bearer *****' -H 'Content-Type: application/json; charset=utf-8' --compressed | jq '.items[].specification.domain' >"${HOME}/Downloads/example.json"
+curl 'https://cloud.sdu.dk/api/ingresses/browse?itemsPerPage=100&includeOthers=true&sortDirection=ascending' \
+-H 'Accept: */*' -H 'Accept-Language: en-US,en;q=0.5' \
+-H 'Accept-Encoding: gzip, deflate, br' -H 'Authorization: Bearer *****' \
+-H 'Content-Type: application/json; charset=utf-8' \
+--compressed | jq '.items[].specification.domain' >"${HOME}/Downloads/example.json"
 ```
 
 _src 👉 [jq/manual](https://stedolan.github.io/jq/manual/)_
