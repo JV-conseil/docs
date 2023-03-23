@@ -5,7 +5,7 @@ title: PostgreSQL 🐘 Cheatsheet
 
 <!-- markdownlint-disable MD025 MD026 MD033 MD041 -->
 
-<a href="https://www.postgresql.org/docs/15/" target="_blank" title="PostgreSQL v15 Documentation"><img src="https://www.postgresql.org/media/img/about/press/elephant.png" align="right" alt="PostgreSQL Banner with Logo, Elephant and Slogan" height="100"></a>
+<a href="https://www.postgresql.org/docs/15/" target="_blank" title="PostgreSQL v15 Documentation"><img src="https://www.postgresql.org/media/img/about/press/elephant.png" align="right" alt="PostgreSQL Banner with Logo, Elephant and Slogan" height="100" style="margin:1.5em 0 0 0"></a>
 
 <!-- omit in toc -->
 # PostgreSQL 🐘 Cheatsheet

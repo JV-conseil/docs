@@ -5,7 +5,7 @@ title: Markdown
 
 <!-- markdownlint-disable MD025 MD026 MD033 MD041 -->
 
-<a href="https://daringfireball.net/projects/markdown/" target="_blank" title="Markdown By John Gruber"><img src="https://raw.githubusercontent.com/dcurtis/markdown-mark/master/svg/markdown-mark.svg" align="right" alt="Markdown By John Gruber" height="80"></a>
+<a href="https://daringfireball.net/projects/markdown/" target="_blank" title="Markdown By John Gruber"><img src="https://raw.githubusercontent.com/dcurtis/markdown-mark/master/svg/markdown-mark.svg" align="right" alt="Markdown By John Gruber" height="80" style="margin:1.5em 0 0 .5em"></a>
 
 <!-- omit in toc -->
 # Markdown
