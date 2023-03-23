@@ -40,12 +40,12 @@ title: Bash
 
 ## Extract a substring from a string
 
-With `grep -Eo` + [regex](https://regex101.com/library/wUcSv4) pattern
+With `grep -Eo` and a [regex](https://regex101.com/library/wUcSv4) pattern
 
 ```bash
 grep -Eo "http[^ ']+" <<EOF
 curl 'https://cloud.sdu.dk/api/ingresses/browse?itemsPerPage=100&includeOthers=true&sortDirection=ascending'
--H 'Accept: */*' -H 'Accept-Language: en-US,en;q=0.5'
+-H 'Accept-Language: en-US,en;q=0.5'
 -H 'Accept-Encoding: gzip, deflate, br'
 -H 'Authorization: Bearer ****'
 -H 'Content-Type: application/json; charset=utf-8'
@@ -56,6 +56,12 @@ curl 'https://cloud.sdu.dk/api/ingresses/browse?itemsPerPage=100&includeOthers=t
 -H 'Pragma: no-cache'
 -H 'Cache-Control: no-cache'
 EOF
+```
+
+will output
+
+```bash
+https://cloud.sdu.dk/api/ingresses/browse?itemsPerPage=100&includeOthers=true&sortDirection=ascending
 ```
 
 _src 👉 [stackoverflow.com](https://stackoverflow.com/a/13373256/2477854)_
@@ -78,16 +84,36 @@ With `grep` and `sed`
 grep -Eo "^repository.+$" pyproject.toml | sed -E 's/^repository = "(.+)"$/\1/'
 ```
 
+will output
+
+```bash
+https://github.com/JV-conseil/docs
+```
+
 ## Read a JSON stream
 
 With `jq`
 
 ```bash
 curl 'https://cloud.sdu.dk/api/ingresses/browse?itemsPerPage=100&includeOthers=true&sortDirection=ascending' \
--H 'Accept: */*' -H 'Accept-Language: en-US,en;q=0.5' \
+-H 'Accept-Language: en-US,en;q=0.5' \
 -H 'Accept-Encoding: gzip, deflate, br' -H 'Authorization: Bearer *****' \
 -H 'Content-Type: application/json; charset=utf-8' \
 --compressed | jq '.items[].specification.domain' >~/Downloads/example.json
+```
+
+will output
+
+```bash
+"app-9a7f8023b8b09392140f3ff9f12c91f2.cloud.sdu.dk"
+"app-githubbing.cloud.sdu.dk"
+"app-health-check.cloud.sdu.dk"
+"app-health-status.cloud.sdu.dk"
+"app-mission-ocean.cloud.sdu.dk"
+"app-research-funding.cloud.sdu.dk"
+"app-santa-maria-josefina-do-coracao-de-jesus-sancho-de-guerra.cloud.sdu.dk"
+"app-thalassa.cloud.sdu.dk"
+"app-yerun.cloud.sdu.dk"
 ```
 
 _src 👉 [jq/manual](https://stedolan.github.io/jq/manual/)_
