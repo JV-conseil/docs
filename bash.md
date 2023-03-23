@@ -32,14 +32,15 @@ title: Bash
 ## Table of Content
 
 - [Extract a substring from a string](#extract-a-substring-from-a-string)
-- [Read a Json stream](#read-a-json-stream)
+- [Extract a value from a file](#extract-a-value-from-a-file)
+- [Read a JSON stream](#read-a-json-stream)
 - [Tools for Shell Script Development ⚙️](#tools-for-shell-script-development-️)
 - [Features 🔎](#features-)
 - [Coding Guidelines, Style, Linter ✍️](#coding-guidelines-style-linter-️)
 
 ## Extract a substring from a string
 
-With `grep -Eo` + a [regex](https://regex101.com/library/wUcSv4) pattern
+With `grep -Eo` + [regex](https://regex101.com/library/wUcSv4) pattern
 
 ```bash
 echo "curl 'https://cloud.sdu.dk/api/ingresses/browse?itemsPerPage=100&includeOthers=true&sortDirection=ascending' -H 'Accept: */*' -H 'Accept-Language: en-US,en;q=0.5' -H 'Accept-Encoding: gzip, deflate, br' -H 'Authorization: Bearer *****' -H 'Content-Type: application/json; charset=utf-8'" | grep -Eo "http[^ ']+"
@@ -47,7 +48,25 @@ echo "curl 'https://cloud.sdu.dk/api/ingresses/browse?itemsPerPage=100&includeOt
 
 _src 👉 [stackoverflow.com](https://stackoverflow.com/a/13373256/2477854)_
 
-## Read a Json stream
+## Extract a value from a file
+
+Example of a pyproject.toml file
+
+```txt
+[tool.poetry]
+name = "docs"
+version = "0.1.0"
+description = "Collection of Cheatsheets 🗒️ PostgreSQL 🐘, Git..."
+repository = "https://github.com/JV-conseil/docs"
+```
+
+With `grep` and `sed`
+
+```bash
+grep -Eo "^repository.+$" pyproject.toml | sed -E 's/^repository = "(.+)"$/\1/'
+```
+
+## Read a JSON stream
 
 With `jq`
 
