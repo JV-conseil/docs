@@ -5,7 +5,7 @@ title: Bash
 
 <!-- markdownlint-disable MD025 MD026 MD033 MD041 -->
 
-<a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html" target="_blank" title="Bash 5.2.15(1)-release"><img src="https://bashlogo.com/img/logo/png/full_colored_light.png" align="right" alt="Bash 5.2.15(1)-release" height="80"></a>
+<a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html" target="_blank" title="Bash 5.2.15(1)-release"><img src="https://bashlogo.com/img/logo/png/full_colored_light.png" align="right" alt="Bourne-Again SHell" height="80"></a>
 
 <!-- omit in toc -->
 # Bash
@@ -24,19 +24,73 @@ title: Bash
 <img alt="https://img.shields.io/badge/stack-overflow-orange.svg" src="https://img.shields.io/badge/stack-overflow-orange.svg">
 -->
 
-## References 📚
+> _The only way to really learn scripting is to write scripts -- [Mendel Cooper](https://tldp.org/LDP/abs/html/index.html)_
+>
+> _Writing shell scripts leaves a lot of room to make mistakes, in ways that will cause your scripts to break on certain input, or (if some input is untrusted) open up security vulnerabilities... The simplest step is to avoid using shell at all -- [MIT Student Information Processing Board][MIT Student Information Processing Board]_
 
-- [Advanced Bash-Scripting Guide](https://tldp.org/LDP/abs/html/index.html), an in-depth exploration of the art of shell scripting by Mendel Cooper _(The Linux Documentation Project LDP)_.
-- [Awesome Bash](https://github.com/awesome-lists/awesome-bash) A curated list of delightful Bash scripts and resources.
-- [Shell Scripting for Beginners](https://www.freecodecamp.org/news/shell-scripting-crash-course-how-to-write-bash-scripts-in-linux/) — How to Write Bash Scripts in Linux _(freecodecamp.org)_.
-- The Ultimate Guide to [Modularizing Bash Script Code](https://medium.com/mkdir-awesome/the-ultimate-guide-to-modularizing-bash-script-code-f4a4d53000c2) by Shinichi Okada _(medium.com)_.
-- Google [Shell Style Guide](https://google.github.io/styleguide/shellguide.html) revision 2.02.
-- How to use a [key-value dictionary](https://www.xmodulo.com/key-value-dictionary-bash.html) in bash.
-- Bash [Parameter expansions](https://devhints.io/bash#parameter-expansions) _(devhints.io)_.
-- Bash [Reference Manual](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html) _(gnu.org)_.
+<!-- omit in toc -->
+## Table of Content
 
+- [Extract a substring from a string](#extract-a-substring-from-a-string)
+- [Read a Json stream](#read-a-json-stream)
+- [Tools for Shell Script Development ⚙️](#tools-for-shell-script-development-️)
+- [Features 🔎](#features-)
+- [Coding Guidelines, Style, Linter ✍️](#coding-guidelines-style-linter-️)
+
+## Extract a substring from a string
+
+With `grep -Eo` + a [regex](https://regex101.com/library/wUcSv4) pattern
+
+```bash
+echo "curl 'https://cloud.sdu.dk/api/ingresses/browse?itemsPerPage=100&includeOthers=true&sortDirection=ascending' -H 'Accept: */*' -H 'Accept-Language: en-US,en;q=0.5' -H 'Accept-Encoding: gzip, deflate, br' -H 'Authorization: Bearer *****' -H 'Content-Type: application/json; charset=utf-8'" | grep -Eo "http[^ ']+"
+```
+
+_src :point_right: [stackoverflow.com](https://stackoverflow.com/a/13373256/2477854)_
+
+## Read a Json stream
+
+With `jq`
+
+```bash
+curl 'https://cloud.sdu.dk/api/ingresses/browse?itemsPerPage=100&includeOthers=true&sortDirection=ascending' -H 'Accept: */*' -H 'Accept-Language: en-US,en;q=0.5' -H 'Accept-Encoding: gzip, deflate, br' -H 'Authorization: Bearer *****' -H 'Content-Type: application/json; charset=utf-8' --compressed | jq '.items[].specification.domain' >"${HOME}/Downloads/example.json"
+```
+
+_src :point_right: [jq/manual](https://stedolan.github.io/jq/manual/)_
+
+## Tools for Shell Script Development ⚙️
+
+|                                                                                                                                                                                                 |                                                                                                                                                                                                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <img src="https://timonwong.gallerycdn.vsassets.io/extensions/timonwong/shellcheck/0.29.4/1676233151659/Microsoft.VisualStudio.Services.Icons.Default" height="50" style="margin:.5rem">        | [ShellCheck](https://marketplace.visualstudio.com/items?itemName=timonwong.shellcheck)<br>Integrates [ShellCheck](https://github.com/koalaman/shellcheck) into VS Code, a linter for Shell scripts                                                                              |
+| <img src="https://foxundermoon.gallerycdn.vsassets.io/extensions/foxundermoon/shell-format/7.2.5/1676969811685/Microsoft.VisualStudio.Services.Icons.Default" height="50" style="margin:.5rem"> | [shell-format](https://marketplace.visualstudio.com/items?itemName=foxundermoon.shell-format)<br>A formatter for shell scripts implementing [shfmt](https://github.com/mvdan/sh) parser, formatter, and interpreter<br>See [Google Shell Style Guide][Google Shell Style Guide] |
+
+<!-- omit in toc -->
+## General 📚
+
+- [Bash Reference Manual](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html) - The definitive reference on shell behavior
+- [Advanced Bash-Scripting Guide](https://tldp.org/LDP/abs/html/index.html) - An in-depth exploration of the art of shell scripting by Mendel Cooper
+- [Awesome Bash](https://github.com/awesome-lists/awesome-bash) - A curated list of delightful Bash scripts and resources
+- [Shell Scripting for Beginners](https://www.freecodecamp.org/news/shell-scripting-crash-course-how-to-write-bash-scripts-in-linux/) - How to Write Bash Scripts in Linux
+
+## Features 🔎
+
+- The Ultimate Guide to [Modularizing Bash Script Code](https://medium.com/mkdir-awesome/the-ultimate-guide-to-modularizing-bash-script-code-f4a4d53000c2) by Shinichi Okada
+- How to use a [key-value dictionary](https://www.xmodulo.com/key-value-dictionary-bash.html) in Bash
+- Bash [Parameter expansions](https://devhints.io/bash#parameter-expansions)
+
+## Coding Guidelines, Style, Linter ✍️
+
+- [Google Shell Style Guide][Google Shell Style Guide] revision 2.02
+- The [Unofficial Bash Strict Mode](http://redsymbol.net/articles/unofficial-bash-strict-mode/) - _These lines deliberately cause your script to fail. Wait, what? Believe me, this is a good thing..._
+- [Writing Safe Shell Scripts][MIT Student Information Processing Board] - MIT Student Information Processing Board
+
+<!-- omit in toc -->
 ## Sponsorship
 
 If this project helps you, you can offer me a cup of coffee ☕️ :-)
 
 [![Become a sponsor to JV-conseil](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/JV-conseil)
+
+<!-- links -->
+[Google Shell Style Guide]: https://google.github.io/styleguide/shellguide.html
+[MIT Student Information Processing Board]: https://sipb.mit.edu/doc/safe-shell/
