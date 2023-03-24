@@ -168,7 +168,7 @@ REASSIGN OWNED BY one_user TO another_user ;
 
 ## CSV & JSON Gzip Data Dump
 
-*Optionally with Django*
+_Optionally with Django_
 
 ```bash
 python manage.py dbshell
