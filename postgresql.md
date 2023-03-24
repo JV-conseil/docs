@@ -215,3 +215,4 @@ SELECT * FROM pg_timezone_names ;
 If this project helps you, you can offer me a cup of coffee ☕️ :-)
 
 [![Become a sponsor to JV-conseil](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/JV-conseil)
+
