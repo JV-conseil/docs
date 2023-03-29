@@ -26,6 +26,7 @@ title: Markdown
 
 - [Markdown Syntax](https://daringfireball.net/projects/markdown/syntax) - John Gruber
 - [Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) - Create sophisticated formatting for your prose and code on GitHub with simple syntax
+- [Markdown Tutorial](https://github.com/luong-komorebi/Markdown-Tutorial/blob/master/README_fr.md) - En Français 🇫🇷
 
 ## Sponsorship
 
