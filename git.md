@@ -48,7 +48,7 @@ _src :point_right: [theserverside.com](https://www.theserverside.com/blog/Coffee
 
 ```bash
 git fetch --all
-git reset --hard origin/master
+git reset --hard
 git clean -f -d
 git pull
 ```
