@@ -1,11 +1,11 @@
 ---
-sort: 2
-title: JavaScript Cheatsheet
+sort: 3
+title: JavaScript
 ---
 
 <!-- markdownlint-disable MD025 MD026 MD033 MD041 -->
 
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" title="Bourne-Again SHell"><img src="https://logowik.com/content/uploads/images/3799-javascript.jpg" align="right" alt="JavaScript" height="70" style="margin:2em 0 0 .5em"></a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" title="JavaScript"><img src="https://logowik.com/content/uploads/images/3799-javascript.jpg" align="right" alt="JavaScript" height="70" style="margin:2em 0 0 .5em"></a>
 
 <!-- omit in toc -->
 # JavaScript Cheatsheet
