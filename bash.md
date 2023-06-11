@@ -138,6 +138,7 @@ _src 👉 [jq/manual](https://stedolan.github.io/jq/manual/)_
 - How to use a [key-value dictionary](https://www.xmodulo.com/key-value-dictionary-bash.html) in Bash
 - Bash [Parameter expansions](https://devhints.io/bash#parameter-expansions)
 - How To Use [Bash Parameter Substitution](https://www.cyberciti.biz/tips/bash-shell-parameter-substitution-2.html) Like A Pro
+- Bash [Associative Array](https://lzone.de/cheat-sheet/Bash%20Associative%20Array) Cheat Sheet
 
 ## Coding Guidelines, Style, Linter ✍️
 
