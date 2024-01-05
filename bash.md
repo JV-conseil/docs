@@ -34,6 +34,7 @@ title: Bash
 - [Extract a substring from a string](#extract-a-substring-from-a-string)
 - [Extract a value from a file](#extract-a-value-from-a-file)
 - [Read a JSON stream](#read-a-json-stream)
+- [Create Symbolic Links 🔗](#create-symbolic-links-)
 - [Tools for Shell Script Development ⚙️](#tools-for-shell-script-development-️)
 - [Features 🔎](#features-)
 - [Coding Guidelines, Style, Linter ✍️](#coding-guidelines-style-linter-️)
@@ -117,6 +118,16 @@ will output
 ```
 
 _src 👉 [jq/manual](https://stedolan.github.io/jq/manual/)_
+
+## Create Symbolic Links 🔗
+
+`ln` is a command-line utility for creating links between files. By default, the ln command creates hard links. To create a symbolic link, use the -s (--symbolic) option.
+
+The ln command syntax for creating symbolic links is as follows: `ln -s [OPTIONS] FILE LINK`
+
+e.g.: `ln -s source_file symbolic_link`
+
+_src 👉 [Create Symbolic Links](https://linuxize.com/post/how-to-create-symbolic-links-in-linux-using-the-ln-command/#how-to-use-the-ln-command)_
 
 ## Tools for Shell Script Development ⚙️
 
