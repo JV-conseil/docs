@@ -31,14 +31,25 @@ title: Bash
 <!-- omit in toc -->
 ## Table of Content
 
+- [Create Symbolic Links 🔗](#create-symbolic-links-)
 - [Extract a substring from a string](#extract-a-substring-from-a-string)
 - [Extract a value from a file](#extract-a-value-from-a-file)
-- [Read a JSON stream](#read-a-json-stream)
-- [Create Symbolic Links 🔗](#create-symbolic-links-)
 - [Padding characters with printf](#padding-characters-with-printf)
+- [Read a JSON stream](#read-a-json-stream)
+- [Throbber \& Spinner](#throbber--spinner)
 - [Tools for Shell Script Development ⚙️](#tools-for-shell-script-development-️)
 - [Features 🔎](#features-)
 - [Coding Guidelines, Style, Linter ✍️](#coding-guidelines-style-linter-️)
+
+## Create Symbolic Links 🔗
+
+`ln` is a command-line utility for creating links between files. By default, the ln command creates hard links. To create a symbolic link, use the -s (--symbolic) option.
+
+The ln command syntax for creating symbolic links is as follows: `ln -s [OPTIONS] FILE LINK`
+
+e.g.: `ln -s source_file symbolic_link`
+
+_src 👉 [Create Symbolic Links](https://linuxize.com/post/how-to-create-symbolic-links-in-linux-using-the-ln-command/#how-to-use-the-ln-command)_
 
 ## Extract a substring from a string
 
@@ -92,6 +103,12 @@ will output
 https://github.com/JV-conseil/docs
 ```
 
+## Padding characters with printf
+
+`printf '%0.1s' "."{0..10}` will output `...........`
+
+_src 👉 [Padding characters in printf](https://stackoverflow.com/a/4410103/2477854) and [printf syntax](https://www.warp.dev/terminus/bash-printf)_
+
 ## Read a JSON stream
 
 With `jq`
@@ -120,21 +137,42 @@ will output
 
 _src 👉 [jq/manual](https://stedolan.github.io/jq/manual/)_
 
-## Create Symbolic Links 🔗
+## Throbber & Spinner
 
-`ln` is a command-line utility for creating links between files. By default, the ln command creates hard links. To create a symbolic link, use the -s (--symbolic) option.
+> A throbber, also known as a loading icon, is an animated graphical control element used to show that a computer program is performing an action in background — [wikipedia](https://en.wikipedia.org/wiki/Throbber)
 
-The ln command syntax for creating symbolic links is as follows: `ln -s [OPTIONS] FILE LINK`
+```bash
+# Usage: throbber & my_long_process ; kill %-1
+throbber() {
+  printf "Please wait..."
+  while true; do
+    printf "."
+    sleep .3
+  done
+}
+```
 
-e.g.: `ln -s source_file symbolic_link`
+Add a display to let user wait in bash
 
-_src 👉 [Create Symbolic Links](https://linuxize.com/post/how-to-create-symbolic-links-in-linux-using-the-ln-command/#how-to-use-the-ln-command)_
+- `kill %-1` will kill the n-1'th backgrounded process
 
-## Padding characters with printf
+```bash
+throbber &
+sleep 10
+kill %-1
+```
 
-`printf '%0.1s' "."{0..10}` will output `...........`
+will output
 
-_src 👉 [Padding characters in printf](https://stackoverflow.com/a/4410103/2477854) and [printf syntax](https://www.warp.dev/terminus/bash-printf)_
+`Please wait.............`
+
+Spinner alternative
+
+```bash
+alias spinner='while :; do for s in / - \\ \|; do printf "\n$s"; sleep .1; done; done'
+```
+
+_src 👉 [How to kill the (last - 1) PID](https://unix.stackexchange.com/a/75685/473393) and [How to Write Better Bash Spinners](https://willcarh.art/blog/how-to-write-better-bash-spinners)_
 
 ## Tools for Shell Script Development ⚙️
 
