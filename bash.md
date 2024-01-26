@@ -35,6 +35,7 @@ title: Bash
 - [Extract a value from a file](#extract-a-value-from-a-file)
 - [Read a JSON stream](#read-a-json-stream)
 - [Create Symbolic Links 🔗](#create-symbolic-links-)
+- [Padding characters with printf](#padding-characters-with-printf)
 - [Tools for Shell Script Development ⚙️](#tools-for-shell-script-development-️)
 - [Features 🔎](#features-)
 - [Coding Guidelines, Style, Linter ✍️](#coding-guidelines-style-linter-️)
@@ -128,6 +129,12 @@ The ln command syntax for creating symbolic links is as follows: `ln -s [OPTIONS
 e.g.: `ln -s source_file symbolic_link`
 
 _src 👉 [Create Symbolic Links](https://linuxize.com/post/how-to-create-symbolic-links-in-linux-using-the-ln-command/#how-to-use-the-ln-command)_
+
+## Padding characters with printf
+
+`printf '%0.1s' "."{0..10}` will output `...........`
+
+_src 👉 [Padding characters in printf](https://stackoverflow.com/a/4410103/2477854) and [printf syntax](https://www.warp.dev/terminus/bash-printf)_
 
 ## Tools for Shell Script Development ⚙️
 
