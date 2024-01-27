@@ -105,6 +105,25 @@ https://github.com/JV-conseil/docs
 
 ## Padding characters with printf
 
+```bash
+for i in $(seq -f "%04g" 1 470)
+do
+  echo $i
+done
+```
+
+will output
+
+```bash
+0001
+0002
+...
+0469
+0470
+```
+
+_src 👉 [How to zero pad a sequence of integers in bash so that all have the same width](https://stackoverflow.com/a/8789815/2477854)_
+
 `printf '%0.1s' "."{0..10}` will output `...........`
 
 _src 👉 [Padding characters in printf](https://stackoverflow.com/a/4410103/2477854) and [printf syntax](https://www.warp.dev/terminus/bash-printf)_
