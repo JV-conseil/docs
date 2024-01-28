@@ -37,6 +37,7 @@ title: Bash
 - [Padding characters with printf](#padding-characters-with-printf)
 - [Read a JSON stream](#read-a-json-stream)
 - [Throbber \& Spinner](#throbber--spinner)
+- [Wait for several subprocesses to complete](#wait-for-several-subprocesses-to-complete)
 - [Tools for Shell Script Development ⚙️](#tools-for-shell-script-development-️)
 - [Features 🔎](#features-)
 - [Coding Guidelines, Style, Linter ✍️](#coding-guidelines-style-linter-️)
@@ -192,6 +193,25 @@ alias spinner='while :; do for s in / - \\ \|; do printf "\n$s"; sleep .1; done;
 ```
 
 _src 👉 [How to kill the (last - 1) PID](https://unix.stackexchange.com/a/75685/473393) and [How to Write Better Bash Spinners](https://willcarh.art/blog/how-to-write-better-bash-spinners)_
+
+## Wait for several subprocesses to complete
+
+```bash
+declare -A pids=()
+
+# run processes and store pids in array
+for i in {1..5}; do
+  sleep "${i}" &
+  pids["${i}"]=$!
+done
+
+# wait for all pids
+for pid in "${pids[@]}"; do
+  wait "${pid}"
+done
+```
+
+_src 👉 [Wait for several subprocesses to complete](https://stackoverflow.com/a/356154/2477854)_
 
 ## Tools for Shell Script Development ⚙️
 
