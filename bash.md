@@ -36,6 +36,7 @@ title: Bash
 - [Extract a value from a file](#extract-a-value-from-a-file)
 - [Padding characters with printf](#padding-characters-with-printf)
 - [Read a JSON stream](#read-a-json-stream)
+- [Replace multiline text with Bash](#replace-multiline-text-with-bash)
 - [Throbber \& Spinner](#throbber--spinner)
 - [Wait for several subprocesses to complete](#wait-for-several-subprocesses-to-complete)
 - [Tools for Shell Script Development ⚙️](#tools-for-shell-script-development-️)
@@ -156,6 +157,32 @@ will output
 ```
 
 _src 👉 [jq/manual](https://stedolan.github.io/jq/manual/)_
+
+## Replace multiline text with Bash
+
+With
+[ed line editor](https://www.gnu.org/software/ed/manual/ed_manual.html "GNU manual for ed line editor")
+replace / update a part of multiline text in a text file with automatically
+generated content (eg: Table of contents) 👇
+
+```bash
+_lines=""
+
+for i in {1..10}; do
+  _lines+=$'\n'"${i}. ""$(openssl rand -hex 12)"
+done
+
+ed -s "./sample.md" <<EOF
+/## BEGIN GENERATED/+,/## END GENERATED/-d
+/## BEGIN GENERATED/a
+${_lines}
+
+.
+wq
+EOF
+```
+
+_src 👉 [gist](https://gist.github.com/JV-conseil/681444561e52b4d103e1c3bd8638f34d "Find multi-line text & replace it, using regex, in shell script")_
 
 ## Throbber & Spinner
 

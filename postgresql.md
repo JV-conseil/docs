@@ -181,16 +181,19 @@ TO PROGRAM 'gzip > ~/path-to-a-dump-data-folder/dump_`date +"%Y%m%d_%H%M%S"`.csv
 WITH (FORMAT CSV, HEADER, FORCE_QUOTE(title)) ;
 ```
 
-*src: [Export to CSV and Compress with GZIP in Postgres.](https://stackoverflow.com/a/72275790/2477854)*
+*src: [Export to CSV and Compress with GZIP in Postgres](https://stackoverflow.com/a/72275790/2477854)*
 
 ```sql
 -- EXPORT QUERY GZIP JSON DUMP
-\copy (SELECT JSON_AGG(ROW_TO_JSON(T)) :: text FROM
-(SELECT id, title, ... FROM some_table WHERE id NOT LIKE 'CRITERIA-%' ORDER BY id) AS T)
-TO PROGRAM 'gzip > ~/path-to-a-dump-data-folder/dump_`date +"%Y%m%d_%H%M%S"`.json.gz' ;
+\copy (
+ SELECT JSON_AGG(ROW_TO_JSON(T)) :: text FROM (
+  SELECT title, author, year FROM books WHERE category NOT LIKE 'fiction'
+ ) AS T
+) TO PROGRAM
+'sed ''s~\\\\~\\~g'' | gzip > ./books-`date +"%Y%m%d_%H%M%S"`.json.gz' ;
 ```
 
-*src: [How to export PostgreSQL data to a JSON file.](https://alphahydrae.com/2021/02/how-to-export-postgresql-data-to-a-json-file/)*
+*src: [How to export PostgreSQL data to a JSON file](https://alphahydrae.com/2021/02/how-to-export-postgresql-data-to-a-json-file/ "How to export PostgreSQL data to a JSON file") • [Postgres row_to_json produces invalid JSON with double escaped quotes](https://stackoverflow.com/questions/29869983/postgres-row-to-json-produces-invalid-json-with-double-escaped-quotes/78169174#78169174 "Postgres row_to_json produces invalid JSON with double escaped quotes")*
 
 ## Timezone
 
