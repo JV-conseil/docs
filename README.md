@@ -13,10 +13,10 @@
 
 ## Table of Content
 
-1. [PostgreSQL](postgresql.md) 🐘 Cheatsheet
-2. [Git](git.md) Cheatsheet
-3. [Bash](bash.md) References
-4. [Markdown](markdown.md) References
+1. [PostgreSQL](/postgresql.md) 🐘 Cheatsheet
+2. [Git](/git.md) Cheatsheet
+3. [Bash](/bash.md) References
+4. [Markdown](/mardown.md) References
 
 ## References 📚
 
@@ -30,6 +30,5 @@
 If this project helps you, you can offer me a cup of coffee ☕️ :-)
 
 [![Become a sponsor to JV-conseil](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/JV-conseil)
-
 
 -->
