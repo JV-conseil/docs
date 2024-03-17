@@ -16,7 +16,7 @@
 1. [PostgreSQL](/postgresql.md) 🐘 Cheatsheet
 2. [Git](/git.md) Cheatsheet
 3. [Bash](/bash.md) References
-4. [Markdown](/mardown.md) References
+4. [Markdown](/markdown.md) References
 
 ## References 📚
 
