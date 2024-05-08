@@ -49,7 +49,10 @@ title: Bash
 
 The ln command syntax for creating symbolic links is as follows: `ln -s [OPTIONS] FILE LINK`
 
-e.g.: `ln -s source_file symbolic_link`
+```bash
+ln -s source_file symbolic_link
+ln -s ../README.md ./README.md
+```
 
 _src 👉 [Create Symbolic Links](https://linuxize.com/post/how-to-create-symbolic-links-in-linux-using-the-ln-command/#how-to-use-the-ln-command)_
 
@@ -242,9 +245,9 @@ _src 👉 [Wait for several subprocesses to complete](https://stackoverflow.com/
 
 ## Tools for Shell Script Development ⚙️
 
-| <img src="https://timonwong.gallerycdn.vsassets.io/extensions/timonwong/shellcheck/0.29.4/1676233151659/Microsoft.VisualStudio.Services.Icons.Default" width="100" style="margin:.5rem">        | [ShellCheck](https://marketplace.visualstudio.com/items?itemName=timonwong.shellcheck)<br>Integrates [ShellCheck](https://github.com/koalaman/shellcheck) into VS Code, a linter for Shell scripts                                                                                  |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <img src="https://foxundermoon.gallerycdn.vsassets.io/extensions/foxundermoon/shell-format/7.2.5/1676969811685/Microsoft.VisualStudio.Services.Icons.Default" width="100" style="margin:.5rem"> | [**shell-format**](https://marketplace.visualstudio.com/items?itemName=foxundermoon.shell-format)<br>A formatter for shell scripts implementing [shfmt](https://github.com/mvdan/sh) parser, formatter, and interpreter<br>See [Google Shell Style Guide][Google Shell Style Guide] |
+| <img src="https://timonwong.gallerycdn.vsassets.io/extensions/timonwong/shellcheck/0.29.4/1676233151659/Microsoft.VisualStudio.Services.Icons.Default" alt="ShellCheck" width="100" style="margin:.5rem">          | [ShellCheck](https://marketplace.visualstudio.com/items?itemName=timonwong.shellcheck)<br>Integrates [ShellCheck](https://github.com/koalaman/shellcheck) into VS Code, a linter for Shell scripts                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <img src="https://foxundermoon.gallerycdn.vsassets.io/extensions/foxundermoon/shell-format/7.2.5/1676969811685/Microsoft.VisualStudio.Services.Icons.Default" alt="shell-format" width="100" style="margin:.5rem"> | [**shell-format**](https://marketplace.visualstudio.com/items?itemName=foxundermoon.shell-format)<br>A formatter for shell scripts implementing [shfmt](https://github.com/mvdan/sh) parser, formatter, and interpreter<br>See [Google Shell Style Guide][Google Shell Style Guide] |
 
 <!-- omit in toc -->
 ## General 📚
