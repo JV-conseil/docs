@@ -33,18 +33,19 @@ title: PostgreSQL 🐘 Cheatsheet
 
 ## Database
 
-| Command                                                             | Description                                                                                                            |
-| :------------------------------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------- |
-| `\l+`                                                               | List all databases                                                                                                     |
-| `\c database_name`                                                  | Connect to database_name                                                                                               |
-| `CREATE DATABASE database_name WITH TEMPLATE another_database_name` | Create a database with another database structure<br> and data within the same server                                  |
-| `DROP DATABASE IF EXISTS database_name`                             | Delete a database                                                                                                      |
-| `ALTER DATABASE database_name RENAME TO database_new_name`          | Rename a database                                                                                                      |
-| `VACUUM FULL VERBOSE ANALYZE`                                       | Optimize database                                                                                                      |
-| `show all`                                                          | Display configuration parameters                                                                                       |
-| `pg_dump database \| gzip -9 > database.bak.sql.gz`                 | Database Backup                                                                                                        |
-| `REASSIGN OWNED BY one_user TO another_user`                        | Change the ownership of database objects owned by a database role (works at database level once inside it \c database) |
-| `DROP OWNED BY one_user`                                            | Can safely come after the `REASSIGN OWNED BY` command                                                                  |
+| Command                                                             | Description                                                                                                               |
+| :------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------ |
+| `\c database_name`                                                  | Connect to database_name                                                                                                  |
+| `\l+`                                                               | List all databases                                                                                                        |
+| `ALTER DATABASE database_name RENAME TO database_new_name`          | Rename a database                                                                                                         |
+| `ALTER DATABASE database_name OWNER TO user_name`                   | Change the owner of a database                                                                                            |
+| `CREATE DATABASE database_name WITH TEMPLATE another_database_name` | Create a database with another database structure<br> and data within the same server                                     |
+| `DROP DATABASE IF EXISTS database_name`                             | Delete a database                                                                                                         |
+| `DROP OWNED BY one_user`                                            | Can safely come after the `REASSIGN OWNED BY` command                                                                     |
+| `pg_dump database \| gzip -9 > database.bak.sql.gz`                 | Database Backup                                                                                                           |
+| `REASSIGN OWNED BY one_user TO another_user`                        | Change the ownership of database objects owned<br>by a database role (works at database level once inside it \c database) |
+| `show all`                                                          | Display configuration parameters                                                                                          |
+| `VACUUM FULL VERBOSE ANALYZE`                                       | Optimize database                                                                                                         |
 
 ## Table
 
@@ -56,21 +57,22 @@ title: PostgreSQL 🐘 Cheatsheet
 
 ## User
 
-| Command                                                          | Description                                       |
-| :--------------------------------------------------------------- | :------------------------------------------------ |
-| `\du+`                                                           | List all users                                    |
-| `CREATE USER user_name WITH PASSWORD '****'`                     | Create a user                                     |
-| `DROP USER user_name`                                            | Delete an user                                    |
-| `ALTER ROLE user_name SET client_encoding TO 'utf8'`             | Change encoding for an user                       |
-| `ALTER ROLE user_name SET timezone TO 'UTC'`                     | Change timezone for an user                       |
-| `ALTER ROLE user_name WITH PASSWORD '****'`                      | Change a user password                            |
-| `ALTER ROLE name RENAME TO new_name`                             | Change a user name                                |
-| `GRANT ALL PRIVILEGES ON DATABASE database_name TO user_name`    | Extend user privileges                            |
-| `REVOKE ALL PRIVILEGES ON DATABASE database_name FROM user_name` | Remove privileges from user                       |
-| `COMMENT ON ROLE role_name IS 'description text'`                | Add description to `role`, `table`, `database`... |
-| `SELECT usename, useconfig FROM pg_shadow`                       | View users parameters                             |
-| `GRANT pg_read_all_stats TO user_name`                           | Add access privileges to an user (1)              |
-| `REVOKE pg_read_all_stats FROM user_name`                        | Remove access privileges                          |
+| Command                                                          | Description                                              |
+| :--------------------------------------------------------------- | :------------------------------------------------------- |
+| `\du+`                                                           | List all users                                           |
+| `ALTER ROLE name RENAME TO new_name`                             | Change a user name                                       |
+| `ALTER ROLE user_name SET client_encoding TO 'utf8'`             | Change encoding for an user                              |
+| `ALTER ROLE user_name SET timezone TO 'UTC'`                     | Change timezone for an user                              |
+| `ALTER ROLE user_name WITH PASSWORD '****'`                      | Change a user password                                   |
+| `COMMENT ON ROLE role_name IS 'description text'`                | Add description to `role`, `table`, `database`...        |
+| `CREATE USER user_name WITH PASSWORD '****'`                     | Create a user                                            |
+| `DROP USER user_name`                                            | Delete an user                                           |
+| `GRANT ALL ON SCHEMA public TO user_name`                        | In case of `ERROR:  permission denied for schema public` |
+| `GRANT ALL PRIVILEGES ON DATABASE database_name TO user_name`    | Extend user privileges                                   |
+| `GRANT pg_read_all_stats TO user_name`                           | Add access privileges to an user (1)                     |
+| `REVOKE ALL PRIVILEGES ON DATABASE database_name FROM user_name` | Remove privileges from user                              |
+| `REVOKE pg_read_all_stats FROM user_name`                        | Remove access privileges                                 |
+| `SELECT usename, useconfig FROM pg_shadow`                       | View users parameters                                    |
 
 *(1) PostgreSQL provides a set of [default roles](https://www.postgresql.org/docs/13/default-roles.html)
 which provide access to certain, commonly needed, privileged capabilities and information*
