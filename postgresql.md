@@ -33,19 +33,19 @@ title: PostgreSQL 🐘 Cheatsheet
 
 ## Database
 
-| Command                                                             | Description                                                                                                               |
-| :------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------ |
-| `\c database_name`                                                  | Connect to database_name                                                                                                  |
-| `\l+`                                                               | List all databases                                                                                                        |
-| `ALTER DATABASE database_name RENAME TO database_new_name`          | Rename a database                                                                                                         |
-| `ALTER DATABASE database_name OWNER TO user_name`                   | Change the owner of a database                                                                                            |
-| `CREATE DATABASE database_name WITH TEMPLATE another_database_name` | Create a database with another database structure<br> and data within the same server                                     |
-| `DROP DATABASE IF EXISTS database_name`                             | Delete a database                                                                                                         |
-| `DROP OWNED BY one_user`                                            | Can safely come after the `REASSIGN OWNED BY` command                                                                     |
-| `pg_dump database \| gzip -9 > database.bak.sql.gz`                 | Database Backup                                                                                                           |
-| `REASSIGN OWNED BY one_user TO another_user`                        | Change the ownership of database objects owned<br>by a database role (works at database level once inside it \c database) |
-| `show all`                                                          | Display configuration parameters                                                                                          |
-| `VACUUM FULL VERBOSE ANALYZE`                                       | Optimize database                                                                                                         |
+| Command                                                             | Description                                                                                                                 |
+| :------------------------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------- |
+| `\c database_name`                                                  | Connect to database_name                                                                                                    |
+| `\l+`                                                               | List all databases                                                                                                          |
+| `ALTER DATABASE database_name RENAME TO database_new_name`          | Rename a database                                                                                                           |
+| `ALTER DATABASE database_name OWNER TO user_name`                   | Change the owner of a database                                                                                              |
+| `CREATE DATABASE database_name WITH TEMPLATE another_database_name` | Create a database with another database structure and data within the same server                                           |
+| `DROP DATABASE IF EXISTS database_name`                             | Delete a database                                                                                                           |
+| `DROP OWNED BY one_user`                                            | Can safely come after the `REASSIGN OWNED BY` command                                                                       |
+| `pg_dump database \| gzip -9 > database.bak.sql.gz`                 | Database Backup                                                                                                             |
+| `REASSIGN OWNED BY one_user TO another_user`                        | Change the ownership of database objects owned by a database role<br>(works at database level once inside it `\c database`) |
+| `show all`                                                          | Display configuration parameters                                                                                            |
+| `VACUUM FULL VERBOSE ANALYZE`                                       | Optimize database                                                                                                           |
 
 ## Table
 
@@ -209,7 +209,7 @@ SELECT * FROM pg_timezone_names ;
 <!-- omit in toc -->
 ## References 📚
 
-- PostgreSQL 14.4 [Documentation](https://www.postgresql.org/docs/14/) (postgresql.org).
+- PostgreSQL 16 [Documentation](https://www.postgresql.org/docs/16/) (postgresql.org).
 - PostgreSQL interactive terminal [psql](https://www.postgresql.org/docs/current/app-psql.html) (postgresql.org).
 - Django [PostgreSQL notes](https://docs.djangoproject.com/en/4.0/ref/databases/#postgresql-notes) (docs.djangoproject.com).
 - Postgres [Cheat Sheet](https://postgrescheatsheet.com/#/tables).
@@ -220,4 +220,3 @@ SELECT * FROM pg_timezone_names ;
 If this project helps you, you can offer me a cup of coffee ☕️ :-)
 
 [![Become a sponsor to JV-conseil](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/JV-conseil)
-
