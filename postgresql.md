@@ -28,6 +28,7 @@ JVconseil on Mastodon")
 
 - [Database](#database)
 - [Table](#table)
+- [Schema](#schema)
 - [User](#user)
 - [How To Delete Duplicate Rows in PostgreSQL](#how-to-delete-duplicate-rows-in-postgresql)
 - [Show active sessions on a database](#show-active-sessions-on-a-database)
@@ -59,6 +60,17 @@ JVconseil on Mastodon")
 | `\dt+`                                                                  | Show all tables       |
 | `DROP TABLE IF EXISTS table_name`                                       | Delete a table        |
 | `\copy (SELECT * FROM table_name) TO 'file_path_and_name.csv' WITH CSV` | Export a table as CSV |
+
+## Schema
+
+| Command | Description      |
+| :------ | :--------------- |
+| `\dn+`  | Show all schemas |
+
+```sql
+CREATE SCHEMA sdu
+    CREATE TABLE test (title text, release date, awards text[])
+```
 
 ## User
 
