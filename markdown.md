@@ -72,6 +72,11 @@ Review your VS Code settings in 👇
 > [!TIP]
 > If you wish to...
 
+```tip
+> [!TIP]
+> If you wish to...
+```
+
 ```txt
 > [!TIP]
 > If you wish to...
