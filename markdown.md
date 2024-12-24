@@ -59,6 +59,36 @@ Review your VS Code settings in 👇
 1. `~/GitHub/<owner>/<repo>/.vscode/settings.json`
 2. `~/Library/Application Support/Code/User/settings.json`
 
+## Note, Tip, Warning
+
+> [!NOTE]
+> Please note that...
+
+```txt
+> [!NOTE]
+> Please note that...
+```
+
+> [!TIP]
+> If you wish to...
+
+```txt
+> [!TIP]
+> If you wish to...
+```
+
+> [!WARNING]
+>
+> 1. When using...
+> 2. This step is crucial as it ensures your database is properly mounted and prevents any loss of data.
+
+```txt
+> [!WARNING]
+>
+> 1. When using...
+> 2. This step is crucial as it ensures your database is properly mounted and prevents any loss of data.
+```
+
 ## References 📚
 
 1. [Markdown and Visual Studio Code](https://code.visualstudio.com/docs/languages/markdown "Markdown and Visual Studio Code") several Markdown-specific features that help you be more productive.
