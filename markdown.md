@@ -64,17 +64,12 @@ Review your VS Code settings in 👇
 > [!NOTE]
 > Please note that...
 
-```txt
-> [!NOTE]
-> Please note that...
+```note
+Please note that...
 ```
-
-> [!TIP]
-> If you wish to...
 
 ```tip
-> [!TIP]
-> If you wish to...
+If you wish to...
 ```
 
 ```txt
@@ -82,10 +77,9 @@ Review your VS Code settings in 👇
 > If you wish to...
 ```
 
-> [!WARNING]
->
-> 1. When using...
-> 2. This step is crucial as it ensures your database is properly mounted and prevents any loss of data.
+```warning
+When using...
+```
 
 ```txt
 > [!WARNING]
