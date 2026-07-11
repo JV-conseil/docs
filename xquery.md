@@ -31,6 +31,7 @@ JVconseil on Mastodon")
 
 | <img src="https://dotjoshjohnson.gallerycdn.vsassets.io/extensions/dotjoshjohnson/xml/2.5.1/1595044151782/Microsoft.VisualStudio.Services.Icons.Default" alt="XML Tools by Josh Johnson" width="100"> | [XML Tools](https://marketplace.visualstudio.com/items?itemName=DotJoshJohnson.xml)<br>XML Formatting, XQuery, and XPath Tools for Visual Studio Code. |
 | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                                                                       |                                                                                                                                                        |
 
 Recommended VS Code extensions in `~/GitHub/<owner>/<repo>/.vscode/extensions.json` 👇
 
