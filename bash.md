@@ -39,6 +39,7 @@ title: Bash
 - [Replace multiline text with Bash](#replace-multiline-text-with-bash)
 - [Throbber \& Spinner](#throbber--spinner)
 - [Wait for several subprocesses to complete](#wait-for-several-subprocesses-to-complete)
+- [Array Slicing](#array-slicing)
 - [Tools for Shell Script Development ⚙️](#tools-for-shell-script-development-️)
 - [Features 🔎](#features-)
 - [Coding Guidelines, Style, Linter ✍️](#coding-guidelines-style-linter-️)
@@ -243,6 +244,46 @@ done
 
 _src 👉 [Wait for several subprocesses to complete](https://stackoverflow.com/a/356154/2477854)_
 
+## Array Slicing
+
+| Method                | Syntax                              | Description                                          | Example                       |
+| --------------------- | ----------------------------------- | ---------------------------------------------------- | ----------------------------- |
+| **Basic Slice**       | `array[@]:start:length`             | Extract slice from start index with specified length | `fruits[@]:1:3`               |
+| **From Start**        | `array[@]:0:length`                 | Get first n elements                                 | `fruits[@]:0:3`               |
+| **From Index**        | `array[@]:start`                    | Get from start index to end                          | `fruits[@]:2`                 |
+| **Last N**            | `array[@]: -n`                      | Get last n elements                                  | `fruits[@]: -2`               |
+| **Negative Indexing** | `array[@]: -n:m`                    | Get m elements from end                              | `fruits[@]: -3:2`             |
+| **Full Array**        | `array[@]:0:${#array[@]}`           | Get entire array                                     | `fruits[@]:0:${#fruits[@]}`   |
+| **Conditional Slice** | `array[@]:start:${#array[@]}-start` | Slice with dynamic length                            | `fruits[@]:1:${#fruits[@]}-1` |
+
+**Key Points:**
+
+- `start` is 0-based index
+- `length` is optional (defaults to end of array)
+- Negative indices count from end (e.g., `-1` is last element)
+- Slice creates new array, doesn't modify original
+- Use `local -n arr_ref="array_name"` for indirect access
+- Can be used with `mapfile` for more complex operations
+
+**Example Usage:**
+
+```bash
+# Initialize array
+fruits=("apple" "banana" "cherry" "date" "elderberry" "fig")
+
+# Extract first 3 elements
+first_three=("${fruits[@]:0:3}")
+
+# Extract from index 2 to end
+from_two=("${fruits[@]:2}")
+
+# Extract last 2 elements
+last_two=("${fruits[@]: -2}")
+
+# Extract 2 elements starting from index 1
+slice=("${fruits[@]:1:2}")
+```
+
 ## Tools for Shell Script Development ⚙️
 
 | <img src="https://timonwong.gallerycdn.vsassets.io/extensions/timonwong/shellcheck/0.29.4/1676233151659/Microsoft.VisualStudio.Services.Icons.Default" alt="ShellCheck" width="100" style="margin:.5rem">          | [ShellCheck](https://marketplace.visualstudio.com/items?itemName=timonwong.shellcheck)<br>Integrates [ShellCheck](https://github.com/koalaman/shellcheck) into VS Code, a linter for Shell scripts                                                                                  |
@@ -264,6 +305,7 @@ _src 👉 [Wait for several subprocesses to complete](https://stackoverflow.com/
 - Bash [Parameter expansions](https://devhints.io/bash#parameter-expansions)
 - How To Use [Bash Parameter Substitution](https://www.cyberciti.biz/tips/bash-shell-parameter-substitution-2.html) Like A Pro
 - Bash [Associative Array](https://lzone.de/cheat-sheet/Bash%20Associative%20Array) Cheat Sheet
+- [Bash Math Operations (Bash Arithmetic) Explained](https://phoenixnap.com/kb/bash-math)
 
 ## Coding Guidelines, Style, Linter ✍️
 
