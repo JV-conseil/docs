@@ -51,6 +51,8 @@ Review your VS Code settings in 👇
 ## References 📚
 
 - XQuery 3.0 [Documentation](https://www.w3.org/XML/Query/) (w3.org).
+- Xidel / Internet Tools [function list](https://www.benibela.de/documentation/internettools/xpath-functions.html#fn-adjust-dateTime-to-timezone) (benibela.de/documentation).
+- XPath and XQuery [Functions](https://www.w3.org/TR/xpath-functions-31/#func-adjust-dateTime-to-timezone) and Operators 3.1 (w3.org).
 
 <!-- omit in toc -->
 ## Sponsorship
