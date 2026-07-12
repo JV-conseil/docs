@@ -1,6 +1,6 @@
 ---
 sort: 3
-title: JavaScript
+title: JavaScript Cheatsheet
 ---
 
 <!-- markdownlint-disable MD025 MD026 MD033 MD041 -->

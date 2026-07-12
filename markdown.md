@@ -1,6 +1,6 @@
 ---
 sort: 5
-title: Markdown
+title: Markdown Cheatsheet
 ---
 
 <!-- markdownlint-disable MD025 MD026 MD033 MD041 -->
@@ -8,7 +8,7 @@ title: Markdown
 <a href="https://daringfireball.net/projects/markdown/" target="_blank" title="Markdown By John Gruber"><img src="https://raw.githubusercontent.com/dcurtis/markdown-mark/master/svg/markdown-mark.svg" align="right" alt="Markdown By John Gruber" height="80" style="margin:1.5em 0 0 .5em"></a>
 
 <!-- omit in toc -->
-# Markdown
+# Markdown Cheatsheet
 
 [![Become a sponsor to JV-conseil](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/JV-conseil "Become a sponsor to JV-conseil")
 [![Follow JV conseil on StackOverflow](https://img.shields.io/stackexchange/stackoverflow/r/2477854)](https://stackoverflow.com/users/2477854/jv-conseil "Follow JV conseil on StackOverflow")

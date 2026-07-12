@@ -16,9 +16,10 @@
 
 1. [PostgreSQL](/postgresql.md) 🐘 Cheatsheet
 2. [Git](/git.md) Cheatsheet
-3. [Bash](/bash.md) References
-4. [Markdown](/markdown.md) References
-5. [XQuery](/xquery.md) References
+3. [JavaScript](/javascript.md) Cheatsheet
+4. [Bash](/bash.md) Cheatsheet
+5. [Markdown](/markdown.md) Cheatsheet
+6. [XQuery](/xquery.md) Cheatsheet
 
 ## References 📚
 
