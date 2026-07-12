@@ -2,6 +2,7 @@
 <!-- omit in toc -->
 # Collection of Cheatsheets 🗒️
 
+[![pages-build-deployment](https://github.com/JV-conseil/docs/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/JV-conseil/docs/actions/workflows/pages/pages-build-deployment)
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=JV-conseil.docs)
 [![Umami - GDPR compliant alternative to Google Analytics](https://img.shields.io/badge/analytics-umami-green)](https://analytics.umami.is/share/M19mr5L7jVhHuFnb/jv-conseil.github.io "Umami - GDPR compliant alternative to Google Analytics")
 [![License EUPL 1.2](https://img.shields.io/badge/License-EUPL--1.2-blue.svg)](LICENSE)
@@ -17,6 +18,7 @@
 2. [Git](/git.md) Cheatsheet
 3. [Bash](/bash.md) References
 4. [Markdown](/markdown.md) References
+5. [XQuery](/xquery.md) References
 
 ## References 📚
 
